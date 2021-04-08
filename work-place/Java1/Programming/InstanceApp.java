@@ -12,7 +12,11 @@ public class InstanceApp {
 		PrintWriter p2 = new PrintWriter("result2.txt");
 		p2.write("Hello 2");
 		p2.close();
-
+		
+		System.out.println(p1.toString());
+		p2.toString();
+		p2.write("hello 2");	// this write method is for PrintWriter class
+								// This write method override write method of Writer class
 	}
 
 }
