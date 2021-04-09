@@ -1,12 +1,15 @@
 
 public class AccountingMethodApp {
 
+	public static double valueOfSupply;
+	public static double vatRate;
+
 	public static void main(String[] args) {
 		
-		double valueOfSupply = Double.parseDouble(args[0]);
-		double vatRate = 0.1;
+		valueOfSupply = 10000.0;
+		vatRate = 0.1;
 		double expenseRate = 0.3;
-		double vat = getVAT(valueOfSupply, vatRate);
+		double vat = getVAT();
 		double total = valueOfSupply + vat;
 		double expense = valueOfSupply * expenseRate;
 		double income = valueOfSupply - expense;
@@ -25,7 +28,7 @@ public class AccountingMethodApp {
 		
 	}
 
-	private static double getVAT(double valueOfSupply, double vatRate) {
+	private static double getVAT() {
 		return valueOfSupply * vatRate;
 	}
 
