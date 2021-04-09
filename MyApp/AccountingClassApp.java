@@ -1,20 +1,10 @@
-
-public class AccountingMethodApp {
+class Accounting {
 	
-	// Field
 	public static double valueOfSupply;
 	public static double vatRate;
 	public static double expenseRate;
 	
-	// main method
-	public static void main(String[] args) {	
-		valueOfSupply = 10000.0;
-		vatRate = 0.1;
-		expenseRate = 0.3;
-		print();	
-	}
-
-	private static void print() {
+	public static void print() {
 		System.out.println("Value of supply : " + valueOfSupply);
 		System.out.println("VAT : "+ getVAT());
 		System.out.println("Total : "+ getTotal());
@@ -25,32 +15,47 @@ public class AccountingMethodApp {
 		System.out.println("Dividend 3 : "+ getDividend3());
 	}
 
-	private static double getDividend3() {
+	public static double getDividend3() {
 		return getIncome() * 0.2;
 	}
 
-	private static double getDividend2() {
+	public static double getDividend2() {
 		return getIncome() * 0.3;
 	}
 
-	private static double getDividend1() {
+	public static double getDividend1() {
 		return getIncome() * 0.5;
 	}
 
-	private static double getIncome() {
+	public static double getIncome() {
 		return valueOfSupply - getExpense();
 	}
 
-	private static double getExpense() {
+	public static double getExpense() {
 		return valueOfSupply * expenseRate;
 	}
 
-	private static double getTotal() {
+	public static double getTotal() {
 		return valueOfSupply + getVAT();
 	}
 
-	private static double getVAT() {
+	public static double getVAT() {
 		return valueOfSupply * vatRate;
+	}
+	
+}
+
+public class AccountingClassApp {
+
+	// main method
+	public static void main(String[] args) {	
+		Accounting.valueOfSupply = 10000.0;
+		Accounting.vatRate = 0.1;
+		Accounting.expenseRate = 0.3;
+		Accounting.print();
+		// 다른 역할을 하는 변수와 매소드가 (1억개가) 있다면? 
+		// anotherVariable = ...;
+		// anotherMethod = ...;
 	}
 
 }
