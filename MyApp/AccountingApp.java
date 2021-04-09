@@ -19,9 +19,10 @@ public class AccountingApp {
 		System.out.println("Total : "+ total);
 		System.out.println("Expanse : "+ expense);
 		System.out.println("Income : "+ income);
-		System.out.println("Dividend : "+ dividend1);
-		System.out.println("Dividend : "+ dividend2);
-		System.out.println("Dividend : "+ dividend3);
+		System.out.println("Dividend 1 : "+ dividend1);
+		System.out.println("Dividend 2 : "+ dividend2);
+		System.out.println("Dividend 3 : "+ dividend3);
+		
 	}
 
 }
